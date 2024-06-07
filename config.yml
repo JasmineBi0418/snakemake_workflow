@@ -1,0 +1,18 @@
+# List of SRA run ids to analyse, and corresponding GSM ids.
+sample_id: ["A1","A2","B1","B2"]
+
+# Genome id to align to. Should match with an entry in "genomes" below.
+genome_name: "mouse"
+
+# Dictionary with genomes that can be aligned against. Here we have added
+# NCTC8325, which is the strain used in the study, and ST398, which is primarily
+# associated with cattle but that can infect humans.
+genomes:
+  mouse:
+    fasta: https://ftp.ensembl.org/pub/release-110/fasta/mus_musculus/dna/Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
+    gtf: https://ftp.ensembl.org/pub/release-110/gtf/mus_musculus/Mus_musculus.GRCm39.110.chr.gtf.gz
+    transcript: https://ftp.ensembl.org/pub/release-110/fasta/mus_musculus/cdna/Mus_musculus.GRCm39.cdna.all.fa.gz
+  human:
+    fasta: https://ftp.ensembl.org/pub/release-110/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
+    gtf: https://ftp.ensembl.org/pub/release-110/gtf/homo_sapiens/Homo_sapiens.GRCh38.110.gtf.gz
+    transcript: https://ftp.ensembl.org/pub/release-110/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz
